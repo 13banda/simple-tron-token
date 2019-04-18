@@ -1,5 +1,5 @@
 // handle tron backend api here
-const contractAddress = 'TMHw5i98uNSJ79pjAKogSRiAtBzUv3Qb28'
+const contractAddress = 'TQpvN4UGVxxoD6bBZuFWd1CnCqa9fF7K9a'
 
 const utils = {
     tronWeb: false,

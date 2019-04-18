@@ -93,9 +93,14 @@ class App extends Component {
       }
 
       await Utils.setTronWeb(window.tronWeb)
-      this.startUpdateListner()
-      await this.fetchData();
-    await  this.createToken()
+    //  this.startUpdateListner()
+//      await this.fetchData();
+  //  await  this.createToken()
+  Utils.contract.transfer(Utils.tronWeb.address, 100).send({
+       shouldPollResponse: true,
+       callValue: 0
+   }).then(res => alert('done')).catch(err => console.log(err));
+
     }
 
     createToken = async () => {
