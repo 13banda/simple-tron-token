@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "moment": "^2.24.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "tronweb": "^2.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tron:deploy": "PRIVATE_KEY_SHASTA=7911b45e9db66ad59bd86846dc4a6c61e208cadd60d244878aa9a112cd4ec118 tronbox migrate --reset --network shasta",
+    "tron:compile": "tronbox compile --compile-all",
+    "build:tron": "yarn tron:compile && yarn tron:deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
